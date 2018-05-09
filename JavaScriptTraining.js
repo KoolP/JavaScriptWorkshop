@@ -50,3 +50,10 @@ function successor2(a) {
 }
 
 //upg 5
+// function authenticate(userName, passWord) {
+// if uerName = 'jonkri' && passWord = 'secret' {
+//   return true;
+// }else {
+//   return false;
+// }
+// }
