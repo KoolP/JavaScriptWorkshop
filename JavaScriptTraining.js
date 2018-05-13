@@ -421,39 +421,49 @@ function lataaArkistoo(osuma) {
 
 
 // UPG 14
-var gronsakArr = ['tomat', 'gurka', 'selleri'];
+var gronsakArr = ['tomat', 'gurka', 'selleribanan'];
 var mysteryWord = gronsakArr[Math.floor(Math.random() * gronsakArr.length)];
 //var guessesLeft = 3;
+var s;
 var count = 0;
 var answeredArr = [];
-var wrd;
 
 function startUp() {
   var bokstav = alert("Gissa bokstav på en gömd grönsak");
 
   for (var i =0; i < mysteryWord.length; i++) {
-    answeredArr[i] = " - ";
+    answeredArr[i] = "-";
   }
-  wrd = answeredArr.join(" ");
-  document.getElementById("answer").innerHTML = wrd;
+  s = answeredArr.join(" ");
+  document.getElementById("answer").innerHTML = s;
 }
 
 function Letter() {
   console.log("Letter function fired");
+  console.log(mysteryWord.count);
   //Here we get the lette user typed
   var letter = document.getElementById("letter").value;
   //make sure we have a guessesLeft
   if (letter.length > 0) {
-    for (var i=0; i > mysteryWord.length; i++){
+    for (var i=0; i < mysteryWord.length; i++){
       //if mysteryWord contains a lette that is typed in
       if (mysteryWord[i] === letter) {
         //assign it to letter
-        gronsakArr[i] = letter;
+        answeredArr[i] = letter;
       }
     }
-    counter++;
-    document.getElementById("counter").innerHTML = "No of clicks" + count;
+    count++;
+    document.getElementById("counter").innerHTML = "Clicks: " + count;
     document.getElementById("answer").innerHTML = answeredArr.join(" ");
-
   }
+  //annoy
+  // if (count>2){
+  //   document.getElementById("stat").innerHTML = "Come on";
+  // }
+  if (answeredArr.includes("-")) {
+    document.getElementById("stat").innerHTML = "Come on, not yet";
+  } else {
+    document.getElementById("stat").innerHTML = "Yay Congrats! You got the word";
+  }
+
 }

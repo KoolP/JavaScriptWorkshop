@@ -24,10 +24,10 @@
 
 #letter {
   border-style: none;
-  border-bottom: 2px solid; width: 5%;
+  border-bottom: 2px solid;
 }
 
 
-#counter, #stat {
-  border-bottom: 1px solid; width: 5%;
+#counter{
+  /* border-bottom: 1px solid; width: 10% */
 }
