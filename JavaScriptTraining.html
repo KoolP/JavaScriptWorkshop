@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <title></title>
     <script src="javaScriptTraining.js"></script>
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
     <script>
       //hello2()
       //not()
@@ -14,11 +15,20 @@
 
   </head>
 
-  <body>
+  <body onload ="startUp()">
 
     <h1>Övningsuppgift 1</h1>
     <h2>Testa gihub</h2>
     <h2>test2</h2>
+    <button class="button" onclick="hangaGubbe()">Spela HängaGubbe</button>
+    <br><br>
+    Guess a letter: <input id="letter" type="text">
+    <input class="button2" type="button" value="letter" onclick="Letter()"/>
+    <p id="answer"></p>
+        <br>
+    <p id="counter"></p>
+    <p id="stat"></p>
+
 
   </body>
 
